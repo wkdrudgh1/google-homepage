@@ -8,19 +8,20 @@ import Images from './pages/Images';
 import Store from './pages/Store';
 
 import {Routes} from 'react-router-dom';
+import GlobalStyle  from './globalStyles';
 
 function App() {
   return (
     <>
+    <GlobalStyle/>
       <Navbar/>
-      <Home/>
       <Routes>
         <Route path='/' exact element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/store' element={<Store/>}/>
         <Route path='/gmail' element={<Gmail/>}/>
         <Route path='/images' element={<Images/>}/>
-      </Routes>
+      </Routes> 
     </>
   );
 }
